@@ -201,6 +201,7 @@
 
 				/*=======rwd========*/
 		@media screen and (max-width:767px){
+			/*=====iphone6========*/
 			.content{
 				top: -210px;	
 			}
@@ -248,7 +249,24 @@
 				66.666%{transform:rotateZ(15deg);}
 				100%{transform:rotateZ(0deg);}
 			}
+	
 		}
+		@media screen and (max-width:320px){
+					/*=====iphone5========*/
+			.content{
+				top: -185px;	
+			}
+			.content .pic2{
+				top:32vh;
+			}
+			.content .pic3{
+				top:54vh;
+			}
+			.s1 .content .signIn{
+				bottom: -75vh;	
+			}
+		}		
+
 
 				/*========pc============*/
 		@media screen and (min-width:768px){
@@ -575,6 +593,12 @@
 			}
 			.s2 .scrollDown1{
 				display: none;
+			}
+		}
+		/*===iphone5=======*/
+		@media screen and (max-width:320px){
+			.s2 .content2{
+				top: -185px;
 			}
 		}
 
@@ -1077,7 +1101,7 @@
 				/*=====rwd=========*/
 		@media screen  and (max-width:767px){
 			.s4 .content4{
-				padding-top: 90px;
+				padding-top: 80px;
 			}
 			.s4 .content4 .bgHouse{
 				/*top:20vh;*/
@@ -1165,6 +1189,20 @@
 				display: none;
 			}
 
+		}
+		@media screen and (max-width: 320px){
+			.sexcheck>img{
+				width: 50px;	
+			}
+			.dpd>img{
+				width: 26px;	
+			}
+			.changeDress{
+				top: 64vh;
+			}
+			.changeDress2{
+			 	top: 77vh;	
+			 }
 		}
 
 		/*======================第五區==========================================*/
@@ -1930,3 +1968,34 @@
     			left: 70px;
     		}
 		}		
+		/*========iphone5=========*/
+		@media screen and (max-width:320px){
+			.s7 .content7{
+				top: -185px;
+			}
+			.s7 .content7 > div[class^="bonus"]{
+				width: 110px;
+				margin-left: -55px;
+			}
+			.s7 .content7 .bonus1 div[class^="computer-content"] {
+			    width: 20px;
+			    top: 11px;
+			    left: 12px;
+			}    
+			.s7 .content7 > div[class^="bonus"] p {
+   				 margin-top: 0px;
+   			}
+   			.s7 .content7 > div[class^="bonus"]:nth-of-type(2) {
+			    top: 34vh;
+			}	 
+			.bonus3-1 {
+			    width: 32px;
+			    top: 53px;
+			    left: 59px;
+			}
+			.bonus3-2 img, .bonus3-3 img, .bonus3-4 img, .bonus3-5 img, .bonus3-6 img, .bonus3-7 img {
+			    width: 40px;
+			}
+		}
+
+
