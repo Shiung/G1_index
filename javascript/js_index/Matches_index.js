@@ -316,9 +316,9 @@ $(window).ready(function(){
 									})
 								});
 							}else{
-								$('.dc:eq(0)').delay(1500).animate({width:'toggle',height:'toggle',top:'165px',left:'30%'},500,function(){
-									$('.dc:eq(1)').animate({width:'toggle',height:'toggle',top:'165px',left:'50%'},500,function(){
-										$('.dc:eq(2)').animate({width:'toggle',height:'toggle',top:'165px',left:'70%'},500)
+								$('.dc:eq(0)').delay(1500).animate({width:'toggle',height:'toggle',top:'100px',left:'25%'},500,function(){
+									$('.dc:eq(1)').animate({width:'toggle',height:'toggle',top:'100px',left:'50%'},500,function(){
+										$('.dc:eq(2)').animate({width:'toggle',height:'toggle',top:'100px',left:'75%'},500)
 									})
 								});
 							}

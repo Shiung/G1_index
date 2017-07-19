@@ -508,11 +508,11 @@
 				top: 13vh;
 			}
 			.present-cloud1 img {
-				width: 1000px;
+				width: 1300px;
 			}
 			.present-cloud1{
-				margin-left: -500px;
-				bottom: -78vh;
+				margin-left: -650px;
+				bottom: -85vh;
 			}
 		}
 				/*======rwd========*/
@@ -1029,6 +1029,7 @@
 			border-radius: 20px;
 			padding: 10px 0; 
 			opacity: 0;
+			box-shadow: 1px 1px 3px rgba(0,0,0,.3);
 		}
 		.changeDress p,.changeDress2 p{
 			font-size: 15px;
@@ -1051,7 +1052,18 @@
 		}
 		@media screen  and (max-width:1450px){
 			.s4 .content4 .bgHouse{
-				top: 30vh;
+				top: 33vh;
+				margin-left: -350px;
+			}
+			.s4 .content4 .bgHouse img{
+				width: 700px;
+			}
+			.s4 .content4 .present-cloud6{
+				margin-left: -500px;
+				top: 40vh;
+			}
+			.s4 .content4 .present-cloud6 img {
+    			width: 1000px;
 			}
 		}
 		@media screen  and (max-width:1280px){
@@ -1299,7 +1311,7 @@
 			color:#000;
 			z-index: 2;
 			padding:20px;
-			box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+			box-shadow: 1px 1px 3px rgba(0,0,0,.5);
 			display: none;
 			border-radius: 10px;
 			overflow: hidden;
@@ -1488,6 +1500,7 @@
 				transition: 1s;
 				border-radius: 10px;
 				overflow: hidden;
+				color: #fff;
 			}
 			.s6 .content6 .present-floor5 .action2Box .action2_back{
 				background-color: rgba(255,78,67,1);
@@ -1497,6 +1510,7 @@
 			}
 			.s6 .content6 .present-floor5 h3{
 				margin: 40px 0;
+				color: #fff;
 			}
 			.s6 .content6 .present-floor5 .action1_back .actionBar1,.s6 .content6 .present-floor5 .action2_back .actionBar2,.s6 .content6 .present-floor5 .action3_back .actionBar3{
 				width: 80%;
