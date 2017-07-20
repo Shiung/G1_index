@@ -1,4 +1,5 @@
 $(window).ready(function(){
+	var s1timer=0; // rwd 不使用full page s2觸動動畫
 	var s2timer=0; // rwd 不使用full page s2觸動動畫
 	var s3timer=0; // rwd 不使用full page s3觸動動畫
 	var s4timer=0; // rwd 不使用full page s4觸動動畫
@@ -160,23 +161,23 @@ $(window).ready(function(){
 							zIndex:'3',
 							opacity:'1'
 						});
-					}else{ //rwd
-						$(".tree").css({
-							top:'-200px',
-							zIndex:'1',
-							opacity:'1'
-						});
-						$(".chair").css({
-							top:'0px',
-							zIndex:'3',
-							opacity:'1'
-						});
-						$(".person2").css({
-							top:'-35px',
-							zIndex:'3',
-							opacity:'1'
-						});
-					}
+					}// else{ //rwd
+					// 	$(".tree").css({
+					// 		top:'-200px',
+					// 		zIndex:'1',
+					// 		opacity:'1'
+					// 	});
+					// 	$(".chair").css({
+					// 		top:'0px',
+					// 		zIndex:'3',
+					// 		opacity:'1'
+					// 	});
+					// 	$(".person2").css({
+					// 		top:'-35px',
+					// 		zIndex:'3',
+					// 		opacity:'1'
+					// 	});
+					// }
 					// =============貨車=======================
 						if($(".car").css("right") == "-215px"){
 							$(".car").animate({right:'40%'},3000,function(){
@@ -256,41 +257,41 @@ $(window).ready(function(){
 							opacity:'1',
 							transition:'1s 1s'
 						});
-					}else{
-						$(".hanger").css({
-							top:'90px',
-							zIndex:'1',
-							opacity:'1'
-						});
-						$(".dressing").css({
-							top:'22px',
-							zIndex:'1',
-							opacity:'1'
-						});
-						$('.dressing2').css({
-							top:'22px',
-							zIndex:'2',
-							opacity:'1'
-						});
-						$('div[class^="dressing-door"]').css({
-							top:'22px',
-							zIndex:'1',
-							opacity:'1'
-						});
-						$(".person3").css({
-							top:'80px',
-							zIndex:'1',
-							opacity:'1'
-						});
-						$(".changeDress").css({
-							opacity:'1',
-							transition:'1s 1s'
-						});
-						$(".changeDress2").css({
-							opacity:'1',
-							transition:'1s 1s'
-						});
-					}
+					}//else{
+					// 	$(".hanger").css({
+					// 		top:'90px',
+					// 		zIndex:'1',
+					// 		opacity:'1'
+					// 	});
+					// 	$(".dressing").css({
+					// 		top:'22px',
+					// 		zIndex:'1',
+					// 		opacity:'1'
+					// 	});
+					// 	$('.dressing2').css({
+					// 		top:'22px',
+					// 		zIndex:'2',
+					// 		opacity:'1'
+					// 	});
+					// 	$('div[class^="dressing-door"]').css({
+					// 		top:'22px',
+					// 		zIndex:'1',
+					// 		opacity:'1'
+					// 	});
+					// 	$(".person3").css({
+					// 		top:'80px',
+					// 		zIndex:'1',
+					// 		opacity:'1'
+					// 	});
+					// 	$(".changeDress").css({
+					// 		opacity:'1',
+					// 		transition:'1s 1s'
+					// 	});
+					// 	$(".changeDress2").css({
+					// 		opacity:'1',
+					// 		transition:'1s 1s'
+					// 	});
+					// }
 					$(".man").slideUp(0);   //預設男生衣服先收回 共用
 				}
 				if(index == 5){
@@ -386,12 +387,38 @@ $(window).ready(function(){
 			}
 		});	
 
-	}else{  //rwd 不使用fullpage
+	}else{  //rwd width<768px 不使用fullpage
 		$(window).scroll(function(){
 			// console.log($(window).scrollTop());
 			var s=$(".s1").height();
-			// console.log(s);		
-			if($(window).scrollTop()>s && $(window).scrollTop()<(s*2)){  //scrollTop(S2)
+			// console.log(s);
+			if($(window).scrollTop() >= 0 && $(window).scrollTop()<s){
+				if(s1timer==0){ //rwd 使用
+					s1timer=1;
+						// =========人物=============
+						$(".style2").animate({top:"-10px"},300,function(){
+							$(".style3").animate({top:"7px",left:"-36px"},300,function(){
+								$(".style4").animate({top:"-2px",left:"35px"},300,function(){
+									$(".style5").animate({top:"-32px",left:"-22px"},300)
+								})
+							})
+						})
+					// ==========禮物==============
+						$(".sp:eq("+0+")").addClass("pRotate");
+						$(".sp:eq("+1+")").addClass("pRotate");
+						$(".sp:eq("+2+")").addClass("pRotate");
+						$(".sp:eq("+3+")").addClass("pRotate2");
+						$(".sp:eq("+4+")").addClass("pRotate2");
+						$(".sp:eq("+5+")").addClass("pRotate2");
+						$(".sp:eq("+6+")").addClass("pRotate3");
+						$(".sp:eq("+7+")").addClass("pRotate3");
+						$(".sp:eq("+8+")").addClass("pRotate3");
+					// ==========交友==============
+						$(".s1-friendship1").css({top:"-5px",left:"-5px",transition:".5s 2.1s"});
+						$(".s1-friendship2").css({top:"-20px",left:"5px",transition:".5s 2.1s"});
+
+					}
+			}else if($(window).scrollTop()>s && $(window).scrollTop()<(s*2)){  //scrollTop(S2)
 				if(s2timer==0){  //判斷第一次只有進入執行動畫
 					s2timer=1;
 					$('.cloth').css({top: '40px',zIndex:'2',opacity:'1'});

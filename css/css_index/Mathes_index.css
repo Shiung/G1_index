@@ -106,18 +106,17 @@
 			text-decoration: none;
 			color:#fff;
 			top: 0;
-			box-shadow: 0 2px 0 #f97838;
+			box-shadow: 0 2px 2px #F99158 ,0 2px 1px 1px rgba(0, 0, 0, 0.1);
+			transition: all 0.15s ease-in-out;
 			position: relative;
-			cursor: pointer;
 		}
 		.s1 .content .signIn a:hover{
-			background-color: #ffa87d;
+			background-color: #FCAD6D;
+			box-shadow: 0 2px 0 #FFA071 ,0 2px 1px 1px rgba(0, 0, 0, 0.1);
 		}
 		.s1 .content .signIn a:active{
-			top:2px;
-			-moz-box-shadow:none;
-			-webkit-box-shadow:none;
 			box-shadow: none;
+			top:1px;
 		}
 		.s1{
 			position: relative;
@@ -509,6 +508,18 @@
 			text-decoration: none;
 			color:#fff;
     		margin-left: 10px;
+    		box-shadow: 0 2px 2px #F99158 ,0 2px 1px 1px rgba(0, 0, 0, 0.1);
+			transition: all 0.15s ease-in-out;
+			top: 0;
+			position: relative;
+		}
+		.s2 .personHover a:hover{
+			background-color: #FCAD6D;
+			box-shadow: 0 2px 0 #FFA071 ,0 2px 1px 1px rgba(0, 0, 0, 0.1);
+		}
+		.s2 .personHover a:active{
+			box-shadow: none;
+			top:1px;
 		}
 		.s2 .personHover p{
 		    color: #fff;
@@ -716,6 +727,18 @@
 			background-color: #FFA266;
 			text-decoration: none;
 			color:#fff;
+			box-shadow: 0 2px 2px #F99158 ,0 2px 1px 1px rgba(0, 0, 0, 0.1);
+			transition: all 0.15s ease-in-out;
+			top: 0;
+			position: relative;
+		}
+		.s3 .content3 .exchagePresent a:hover{
+			background-color: #FCAD6D;
+			box-shadow: 0 2px 0 #FFA071 ,0 2px 1px 1px rgba(0, 0, 0, 0.1);
+		}
+		.s3 .content3 .exchagePresent a:active{
+			box-shadow: none;
+			top:1px;
 		}
 		div[class^="person2Present2"]{
 			position: absolute;
@@ -845,6 +868,18 @@
 			text-decoration: none;
 			color:#fff;
     		margin-left: 10px;
+    		box-shadow: 0 2px 2px #F99158 ,0 2px 1px 1px rgba(0, 0, 0, 0.1);
+			transition: all 0.15s ease-in-out;
+			top: 0;
+			position: relative;
+		}
+		.s3 .person2Hover a:hover{
+			background-color: #FCAD6D;
+			box-shadow: 0 2px 0 #FFA071 ,0 2px 1px 1px rgba(0, 0, 0, 0.1);
+		}
+		.s3 .person2Hover a:active{
+			box-shadow: none;
+			top:1px;
 		}
 		.s3 .person2Hover p{
 		    color: #fff;
@@ -1035,6 +1070,18 @@
 			background-color: #FFA266;
 			text-decoration: none;
 			color:#fff;
+			box-shadow: 0 2px 2px #F99158 ,0 2px 1px 1px rgba(0, 0, 0, 0.1);
+			transition: all 0.15s ease-in-out;
+			position: relative;
+			top: 0;
+		}
+		.s4 .content4 .dressDoll a:hover{
+			background-color: #FCAD6D;
+			box-shadow: 0 2px 0 #FFA071 ,0 2px 1px 1px rgba(0, 0, 0, 0.1);
+		}
+		.s4 .content4 .dressDoll a:active{
+			box-shadow: none;
+			top:1px;
 		}
 		.s4 .content4 .dressDoll{
 			position: absolute;
@@ -1339,6 +1386,18 @@
 			background-color: #FFA266;
 			text-decoration: none;
 			color:#fff;
+			box-shadow: 0 2px 2px #F99158 ,0 2px 1px 1px rgba(0, 0, 0, 0.1);
+			transition: all 0.15s ease-in-out;
+			position: relative;
+			top: 0;
+		}
+		.s5 .content5 .discussArea a:hover{
+			background-color: #FCAD6D;
+			box-shadow: 0 2px 0 #FFA071 ,0 2px 1px 1px rgba(0, 0, 0, 0.1);
+		}
+		.s5 .content5 .discussArea a:active{
+			box-shadow: none;
+			top:1px;
 		}
 		div[class^="discussContent"]{
 			width: 360px;
@@ -1406,7 +1465,7 @@
 				opacity: 0;
 			}
 			.s5 .rwdDiscuss>div>div>div{
-				background-color: rgba(255,255,255,.8);
+				background-color: rgba(255,255,255,1);
 				box-shadow: 1px 1px 3px rgba(0,0,0,.3);
 				padding:20px;
 				color:#000;
@@ -1595,6 +1654,18 @@
 				background-color: #66DBFF;
 				text-decoration: none;
 				color:#fff;
+				box-shadow: 0 2px 2px #65B1C9 ,0 2px 1px 1px rgba(0, 0, 0, 0.1);
+  				transition: all 0.15s ease-in-out;
+  				position: relative;
+  				top: 0;
+			}
+			.s6 .content6 .present-floor5 .action1_back .actionGo1 a:hover,.s6 .content6 .present-floor5 .action2_back .actionGo2 a:hover,.s6 .content6 .present-floor5 .action3_back .actionGo3 a:hover{
+				background-color: #76E2F4;
+			  	box-shadow: 0 2px 0 #55D2F9 ,0 2px 1px 1px rgba(0, 0, 0, 0.1);
+			}
+			.s6 .content6 .present-floor5 .action1_back .actionGo1 a:active,.s6 .content6 .present-floor5 .action2_back .actionGo2 a:active,.s6 .content6 .present-floor5 .action3_back .actionGo3 a:active{
+				box-shadow: none;
+ 				top: 1px;
 			}
 			.s6 .s6Rwd{
 				display: none;
