@@ -203,7 +203,7 @@
 		@media screen and (max-width:767px){
 			/*=====iphone6========*/
 			.content{
-				top: 120px;	
+				top: -210px;	
 			}
 			div[class^="pic"]{
 				position: absolute;
@@ -254,7 +254,7 @@
 		@media screen and (max-width:320px){
 					/*=====iphone5========*/
 			.content{
-				top: 70px;	
+				top: -185px;	
 			}
 			.content .pic2{
 				top:32vh;
@@ -537,7 +537,7 @@
 		@media screen and (max-width:767px){
 			.s2 .content2{
 				/*top: -35vh;	*/
-				top: 70px;
+				top: -210px;
 			}
 			.present-cloud1{
 				margin-left: -350px;
@@ -593,6 +593,12 @@
 			}
 			.s2 .scrollDown1{
 				display: none;
+			}
+		}
+		/*===iphone5=======*/
+		@media screen and (max-width:320px){
+			.s2 .content2{
+				top: -185px;
 			}
 		}
 
@@ -856,11 +862,6 @@
 		}
 				/*======rwd=======*/
 		@media screen and (max-width:767px){
-			.s3{
-				width: 100%;
-				height: 100vh;
-				position: relative;
-			}
 			.s3 .content3 .present-cloud5 img {
 			    width: 400px;
 			    margin-left: -200px;
@@ -1099,11 +1100,6 @@
 		}
 				/*=====rwd=========*/
 		@media screen  and (max-width:767px){
-			.s4{
-				width: 100%;
-				height: 100vh;
-				position: relative;
-			}
 			.s4 .content4{
 				padding-top: 80px;
 			}
@@ -1199,7 +1195,7 @@
 				width: 50px;	
 			}
 			.dpd>img{
-				width: 25px;	
+				width: 26px;	
 			}
 			.changeDress{
 				top: 64vh;
@@ -1386,11 +1382,6 @@
 		
 			/*=====rwd=========*/
 		@media screen  and (max-width:767px){
-			.s5{
-				width: 100%;
-				height: 100vh;
-				position: relative;
-			}
 			.s5 .content5{
 				padding-top: 90px;
 			}
@@ -1425,11 +1416,6 @@
 				margin-top: 10px;
 				color:#FFA266;
 				display: inline-block;
-			}
-		}
-		@media screen  and (max-width:320px){
-			.s5 .rwdDiscuss{
-				top: -90px;
 			}
 		}
 		@media screen  and (max-width:1500px){
@@ -1654,11 +1640,6 @@
 		    /*=============rwd============*/
 		@media screen and ( max-width:767px ){
 			.s6{
-				width: 100%;
-				height: 100vh;
-				position: relative;
-			}
-			.s6{
 				z-index: 3;
 			}
 			.s6 .s6Rwd{
@@ -1735,14 +1716,6 @@
 		    	border-radius: 10px;
 		    	overflow: hidden;
 		    }
-		}
-		@media screen and ( max-width:320px ){
-			.s6 .center.slider{
-				top: -25px;
-			}
-			.s6 .rwdContent{
-				margin-top: -30px;
-			}
 		}
 
 		/*======================第七區==========================================*/
@@ -1911,7 +1884,7 @@
 		@media screen and (max-width:767px){
 			.s7 .content7{
 				width: 100%;
-				top: 70px;
+				top: -210px;
 				left: 0;
 				margin-left: 0;
 			}
@@ -1997,6 +1970,9 @@
 		}		
 		/*========iphone5=========*/
 		@media screen and (max-width:320px){
+			.s7 .content7{
+				top: -185px;
+			}
 			.s7 .content7 > div[class^="bonus"]{
 				width: 110px;
 				margin-left: -55px;
@@ -2019,30 +1995,6 @@
 			}
 			.bonus3-2 img, .bonus3-3 img, .bonus3-4 img, .bonus3-5 img, .bonus3-6 img, .bonus3-7 img {
 			    width: 40px;
-			}
-		}
-		
-
-        /*=============rwd 切換不使用fullpage===========*/
-
-		@media screen and (max-width: 767px){
-			.s1{
-				width: 100%;
-				height: 100vh;
-				position: relative;
-			}
-			.s2{
-				width: 100%;
-				height: 100vh;
-				position: relative;
-			}
-			.s7{
-				width: 100%;
-				height: 100vh;
-				position: relative;
-			}
-			.section{
-				overflow: hidden;
 			}
 		}
 

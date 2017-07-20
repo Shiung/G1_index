@@ -1,10 +1,4 @@
 $(window).ready(function(){
-	var s2timer=0; // rwd 不使用full page s2觸動動畫
-	var s3timer=0; // rwd 不使用full page s3觸動動畫
-	var s4timer=0; // rwd 不使用full page s4觸動動畫
-	var s5timer=0; // rwd 不使用full page s4觸動動畫
-	var s7timer=0; // rwd 不使用full page s4觸動動畫
-	if($(window).width()>767){
 		$('#fullpage').fullpage({
 		  keyboardScrolling:true,
 		  // anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
@@ -63,28 +57,28 @@ $(window).ready(function(){
 							zIndex:'2',
 							opacity:'1' 
 						});						
-					}//else{//rwd
-					// 	$('.cloth').css({
-					// 		top: '40px',
-					// 		zIndex:'2',
-					// 		opacity:'1'
-					// 	});
-					// 	$('.sofa').css({
-					// 		top: '140px',
-					// 		zIndex:'2',
-					// 		opacity:'1' 
-					// 	});
-					// 	$('.table').css({
-					// 		top: '145px',
-					// 		zIndex:'2',
-					// 		opacity:'1'
-					// 	});
-					// 	$('.person').css({
-					// 		top: '110px',
-					// 		zIndex:'2',
-					// 		opacity:'1' 
-					// 	});
-					// } //rwd end
+					}else{//rwd
+						$('.cloth').css({
+							top: '40px',
+							zIndex:'2',
+							opacity:'1'
+						});
+						$('.sofa').css({
+							top: '140px',
+							zIndex:'2',
+							opacity:'1' 
+						});
+						$('.table').css({
+							top: '145px',
+							zIndex:'2',
+							opacity:'1'
+						});
+						$('.person').css({
+							top: '110px',
+							zIndex:'2',
+							opacity:'1' 
+						});
+					} //rwd end
 					// console.log($('.present1').css("top"),$('.present1').css("zIndex"));
 						if($('.present1').css("zIndex") == -100){  //判斷如果第一次執行過動就不會再進場
 							$('.present1').css({
@@ -104,16 +98,16 @@ $(window).ready(function(){
 											});
 										});	
 								});
-							} // else{
-							// 	$('.present-fly').delay(1500).animate({left:'25vw'},3000,function(){
-							// 			$('.present1').css("transition","0s");
-							// 			$('.present1').animate({opacity:'0',},100,function(){
-							// 				$('.present2').delay(100).animate({opacity:'1'},100,function(){
-							// 					$('.present-fly').animate({left:'110vw'},1000);
-							// 				});
-							// 			});	
-							// 	});
-							// }
+							} else{
+								$('.present-fly').delay(1500).animate({left:'25vw'},3000,function(){
+										$('.present1').css("transition","0s");
+										$('.present1').animate({opacity:'0',},100,function(){
+											$('.present2').delay(100).animate({opacity:'1'},100,function(){
+												$('.present-fly').animate({left:'110vw'},1000);
+											});
+										});	
+								});
+							}
 						}	
 						// ==============
 						if($('.personSay').css('top')=="-10px" && $('.personSay').css("zIndex") == 2){
@@ -124,23 +118,23 @@ $(window).ready(function(){
 							for(var z=0;z<$('.scd').length;z++){
 								$(".scd:eq("+z+")").delay(6000).slideDown(0);
 							}
-						}//else{
-						// 	for(var u=0;u<$('.scd').length;u++){
-						// 		$(".scd:eq("+(u+1)+")").delay(6000).slideDown(0);
-						// 	}
-						// }
+						}else{
+							for(var u=0;u<$('.scd').length;u++){
+								$(".scd:eq("+(u+1)+")").delay(6000).slideDown(0);
+							}
+						}
 						if($(window).width()>767){ //pc
 							if($(".person").css('top')=="110px" && $(".personSay").css("opacity")== 1){
 								$(".person").addClass("personmove");
 								$(".personSay").css({opacity:"0",transition:'.3s'});
 								$(".personHover").css({zIndex:"3",opacity:"1"});
 							}
-						}// else{ //rwd
-						// 	if($(".person").css('top')=="110px"  && $(".personSay").css("opacity")== 1 ){
-						// 		$(".personSay").css({opacity:"0",transition:'.3s'});
-						// 		$(".personHover").css({zIndex:"3",opacity:"1"});
-						// 	}
-						// }
+						}else{ //rwd
+							if($(".person").css('top')=="110px"  && $(".personSay").css("opacity")== 1 ){
+								$(".personSay").css({opacity:"0",transition:'.3s'});
+								$(".personHover").css({zIndex:"3",opacity:"1"});
+							}
+						}
 										
 				}
 				if(index == 3){
@@ -386,174 +380,8 @@ $(window).ready(function(){
 			}
 		});	
 
-	}else{  //rwd 不使用fullpage
-		$(window).scroll(function(){
-			// console.log($(window).scrollTop());
-			var s=$(".s1").height();
-			// console.log(s);		
-			if($(window).scrollTop()>s && $(window).scrollTop()<(s*2)){  //scrollTop(S2)
-				if(s2timer==0){  //判斷第一次只有進入執行動畫
-					s2timer=1;
-					$('.cloth').css({top: '40px',zIndex:'2',opacity:'1'});
-							$('.sofa').css({top: '140px',zIndex:'2',opacity:'1'});
-							$('.table').css({top: '145px',zIndex:'2',opacity:'1'});
-							$('.person').css({top: '110px',zIndex:'2',opacity:'1'});
-					if($('.present1').css("zIndex") == -100){  //判斷如果第一次執行過動就不會再進場
-								$('.present1').css({top: '220px',zIndex:'3',opacity:'1' });
-							}	
-						// ======================飛機=================
-							if($('.present-fly').css("left")=="-320px"){ //判斷如果第一次執行過動就不會再進場
-							
-									$('.present-fly').delay(1500).animate({left:'25vw'},3000,function(){
-											$('.present1').css("transition","0s");
-											$('.present1').animate({opacity:'0',},100,function(){
-												$('.present2').delay(100).animate({opacity:'1'},100,function(){
-													$('.present-fly').animate({left:'110vw'},1000,function(){
-														console.log("hello");
-													});
-												});
-											});	
-									});
-							}	
-				}// if s2Timer
 
-				if($('.personSay').css('top')=="-10px" && $('.personSay').css("zIndex") == 2){
-					$('.personSay').css("zIndex","1");
-					$('.personSay').delay(6000).animate({opacity:'1',top:'0'},300,function(){
-						$(".personSay").css({opacity:"0",transition:'0s 3s'});
-						$(".personHover").css({zIndex:"3",opacity:"1",transition:'.5s 3s'});
-					});
-				}
 
-				for(var u=0;u<$('.scd').length;u++){
-					$(".scd:eq("+(u+1)+")").delay(6000).slideDown(0);
-				}
-			}else if($(window).scrollTop()>(s*2) && $(window).scrollTop()<(s*3)){  //scrollTop(S3)
-				if(s3timer==0){
-					s3timer=1;
-					$(".tree").css({
-						top:'-200px',
-						zIndex:'1',
-						opacity:'1'
-					});
-					$(".chair").css({
-						top:'0px',
-						zIndex:'3',
-						opacity:'1'
-					});
-					$(".person2").css({
-						top:'-35px',
-						zIndex:'3',
-						opacity:'1'
-					});
-					if($(".car").css("right") == "-215px"){
-							$(".car").animate({right:'40%'},3000,function(){
-								$('.person2-present1').animate({opacity:"0"},100,function(){
-									$("div[class^='person2Present2']").animate({opacity:'1'},100,function(){
-										$(".car").animate({right:'120%'},1000,function(){
-											$('.person2Present22').addClass("boxRotate2");
-											
-											
-										// ======svg=============
-											$("#spot1").css({
-												animation:"spot 0.5s .8s linear both"
-											});
-											$("#spot2").css({
-												animation:"spot 0.5s .8s linear both"
-											});
-											$(".gift g > path").animate({opacity:"1"},0,function(){
-												$(".gift svg g:eq(0)").addClass("giftHead");
-											});
-											
-										// ======svg  end=============
-											if($(".personSay2").css("top")=="-160px" && $(".personSay2").css("zIndex")==2){
-											$(".personSay2").css("zIndex","1");
-											$(".personSay2").delay(2000).animate({opacity:"1",top:"-150px"},300,function(){
-													$(".personSay2").css({opacity:"0",transition:'0s 2s'});
-													$(".person2Hover").css({zIndex:"3",opacity:"1",transition:'.5s 2s'});
-											});
-											}
-										});
-									});	
-								});
-							});
-						}
-				}
-			}else if($(window).scrollTop()>(s*3) && $(window).scrollTop()<(s*4)){ //scrollTop(S4)
-				if(s4timer==0){
-					s4timer=1;
-					$(".hanger").css({
-								top:'90px',
-								zIndex:'1',
-								opacity:'1'
-							});
-							$(".dressing").css({
-								top:'22px',
-								zIndex:'1',
-								opacity:'1'
-							});
-							$('.dressing2').css({
-								top:'22px',
-								zIndex:'2',
-								opacity:'1'
-							});
-							$('div[class^="dressing-door"]').css({
-								top:'22px',
-								zIndex:'1',
-								opacity:'1'
-							});
-							$(".person3").css({
-								top:'80px',
-								zIndex:'1',
-								opacity:'1'
-							});
-							$(".changeDress").css({
-								opacity:'1',
-								transition:'1s 1s'
-							});
-							$(".changeDress2").css({
-								opacity:'1',
-								transition:'1s 1s'
-							});
-							$(".man").slideUp(0);
-					}
-			}else if($(window).scrollTop()>(s*4) && $(window).scrollTop()<(s*5)){ //scrollTop(S5)
-				if(s5timer==0){
-					s5timer=1;
-					$(".rwdDiscuss").css({opacity:"1",transition:"1s"});
-					}
-			}else if($(window).scrollTop()>(s*6-50)){ //scrollTop(S7)
-				if(s7timer==0){
-					s7timer=1;
-					$('.computer-content1').slideDown(100,function(){
-						$('.computer-content2').slideDown(100,function(){
-							$('.computer-content3').slideDown(100,function(){
-								$('.computer-content4').slideDown(100,function(){
-									 $('.computer-content5').slideDown(100,function(){
-									 	$('.computer-content6').slideDown(100);
-									 });
-								});
-							});
-						});
-					});		
-
-					for(var i=0;i<$('.BM').length;i++){
-						$(".BM:eq("+ i +")").addClass("moneyDown"+i);
-					}
-					
-					$(".bonus33").css("opacity","1");
-					$(".bonus3-1").delay(2000).animate({opacity:"1"},300,function(){
-						$(".bonus3-1").css({transition:".3s",transform:"rotateY(90deg)"});
-					});
-					// $(".bonus3-1").css("transform","rotateY(90deg)");
-					// console.log($(".bshirt").length);
-					for(var k=0 ; k<$(".bshirt").length;k++){
-						$(".bshirt:eq("+k+")").css("opacity","1");
-					}
-				}
-			}
-		}) //＄(window).scroll
-	}
 
 
 
@@ -930,7 +758,7 @@ $(".sexcheck").click(function(){
         autoplay: true,
         autoplaySpeed: 5000
 
-      	});
+      });
 		// ======rwd 活動進度條 default===========
 		var defaultA=$(".action1_back").children("h3").text();
 		var defaultB=$(".action1_back").children(".actionNumberTitle1").children(".actionNumber1").text();
