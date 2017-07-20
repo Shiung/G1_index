@@ -292,7 +292,6 @@ $(window).ready(function(){
 					// 		transition:'1s 1s'
 					// 	});
 					// }
-					$(".man").slideUp(0);   //預設男生衣服先收回 共用
 				}
 				if(index == 5){
 					if($(window).width() > 767){ //pc板
@@ -786,6 +785,7 @@ $(".sexcheck").click(function(){
 			}
 		}else{
 			if($(".man").css("display") == "none"){
+				$(".man").removeClass("DefaultDisplayNone"); //將html 預設的default display:none 移除
 				$(".woman").slideUp(300);
 				$(".man").slideDown(300);
 				$(".person3 img").attr("src","images/img_index/person3-2.png");
