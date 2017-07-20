@@ -1055,6 +1055,9 @@
 			opacity: 0;
 			box-shadow: 1px 1px 3px rgba(0,0,0,.3);
 		}
+		.changeDress2 .DefaultDisplayNone{
+			 	display: none;
+			 }
 		.changeDress p,.changeDress2 p{
 			font-size: 15px;
 		}
