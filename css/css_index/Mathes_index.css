@@ -202,7 +202,7 @@
 		@media screen and (max-width:767px){
 			/*=====iphone6========*/
 			.content{
-				top: 120px;	
+				top: 100px;	
 			}
 			div[class^="pic"]{
 				position: absolute;
@@ -555,6 +555,9 @@
 			}
 			.present-cloud1 img{
 				width: 700px;
+			}
+			.present-cloud2{
+				display: none;
 			}
 			.present .floor img{
 				width: 660px;	
